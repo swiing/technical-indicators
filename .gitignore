@@ -1,0 +1,12 @@
+# don't stage dist and out content
+**/dist/*
+**/out/*
+
+# to opt-out adhoc files, add triple underscores
+___*
+
+node_modules
+
+.DS_Store
+coverage
+*.log

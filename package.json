@@ -1,0 +1,29 @@
+{
+  "name": "technical-indicators",
+  "version": "0.0.1",
+  "description": "Technical indicators for financial analysis",
+  "author": "swiing",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint ./src --ext ts",
+    "style:fix": "prettier src/**/*.ts --write",
+    "style:check": "prettier src/**/*.ts --check",
+    "test": "cross-env FORCE_COLOR=true NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest --verbose --coverage"
+  },
+  "engines": {
+    "npm": ">7"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "5.13.0",
+    "@typescript-eslint/parser": "5.13.0",
+    "eslint": "8.10.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "8.4.0",
+    "jest": "^27.5.1",
+    "prettier": "2.5.1",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.6.2"
+  }
+}
