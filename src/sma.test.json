@@ -1,0 +1,20 @@
+[
+  {
+    "desc": "simple moving average",
+    "input": [10, 11, 12, 13, 14, 15],
+    "param": 4,
+    "output": [11.5, 12.5, 13.5]
+  },
+  {
+    "desc": "too large period",
+    "input": [10, 11, 12, 13, 14, 15],
+    "param": 40,
+    "output": false
+  },
+  {
+    "desc": "non-positive period",
+    "input": [10, 11, 12, 13, 14, 15],
+    "param": -1,
+    "output": false
+  }
+]

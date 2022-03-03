@@ -31,5 +31,9 @@
         "extensions": [".js", ".ts"]
       }
     }
+  },
+
+  "globals": {
+    "NodeJS": true
   }
 }
