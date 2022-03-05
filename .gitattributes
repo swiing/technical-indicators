@@ -1,0 +1,3 @@
+# https://github.com/github/linguist/blob/master/docs/overrides.md
+# This file should not be counted in language stats
+jest.config.cjs linguist-vendored
