@@ -5,9 +5,12 @@
   "author": "swiing",
   "license": "ISC",
   "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "lint": "eslint ./src --ext ts",
+    "prepare": "npm run build",
     "style:fix": "prettier src/**/*.ts --write",
     "style:check": "prettier src/**/*.ts --check",
     "test": "cross-env FORCE_COLOR=true NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest --verbose --coverage"

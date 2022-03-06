@@ -11,10 +11,11 @@
 import fs from 'fs';
 import path from 'path';
 
-import unittest from './util';
+import unittest from './util.js';
 
 fs.readdirSync('./src')
   .filter((file) => path.extname(file) === '.ts')
+  .filter((file) => file !== 'index.ts')
   .forEach((file) => {
     const fn = file.split('.')[0];
 

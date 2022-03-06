@@ -1,0 +1,2 @@
+# keep even if empty. This is used to make sure npm prepare runs as expected
+# see https://stackoverflow.com/a/56082369
