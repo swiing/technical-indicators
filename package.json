@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Technical indicators for financial analysis",
   "author": "swiing",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
