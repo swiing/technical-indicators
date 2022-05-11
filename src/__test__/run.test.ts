@@ -44,9 +44,7 @@ fs.readdirSync('./src')
       // Solved by https://github.com/Chatie/eslint-config/issues/45#issuecomment-885507652
       // (@TODO: this seems a temporary solution though)
       if ((err as NodeJS.ErrnoException).code === 'ENOENT')
-        console.error(
-          `You MUST provide a test file ${fn}.test.json in ./src for ${fn}.`
-        );
+        console.error(`Missing file ${fn}.test.json in ./src.`);
       else if (err instanceof SyntaxError)
         console.error(`Syntax error in ${fn}.test.json`);
 
