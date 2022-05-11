@@ -26,7 +26,7 @@ export default function test({ fn, desc, input, param, output }: testargs) {
       if (!output) expect(generator.next).toThrow();
       else {
         while (output.length)
-          expect(generator.next().value).toBe(output.shift());
+          expect(generator.next().value).toBeCloseTo(output.shift()!, 2);
         expect(generator.next().done).toBe(true);
       }
     });
