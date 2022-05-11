@@ -1,0 +1,20 @@
+[
+  {
+    "desc": "too large period",
+    "input": [11, 12, 13, 14, 15, 16, 18, 19, 22, 23, 23],
+    "param": 40,
+    "output": []
+  },
+  {
+    "desc": "non-positive period",
+    "input": [11, 12, 13, 14, 15, 16, 18, 19, 22, 23, 23],
+    "param": 0,
+    "output": false
+  },
+  {
+    "desc": "variation",
+    "input": [10, 10, 10, 15, 20, 25, 30, 50],
+    "param": 5,
+    "output": [1.5, 2, 4]
+  }
+]
