@@ -1,0 +1,18 @@
+[
+  {
+    "desc": "ema - too small range",
+    "input": [15, 18, 12, 14, 16, 11, 6, 18, 15, 16],
+    "param": 0,
+    "output": false
+  },
+  {
+    "desc": "exponential moving average",
+    "source": "https://stackoverflow.com/a/40058688/18612308",
+    "input": [15, 18, 12, 14, 16, 11, 6, 18, 15, 16],
+    "param": 3,
+    "output": [
+      15, 16.5, 14.25, 14.125, 15.0625, 13.03125, 9.515625, 13.7578125,
+      14.37890625, 15.189453125
+    ]
+  }
+]
