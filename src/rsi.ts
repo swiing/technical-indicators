@@ -12,10 +12,11 @@ export default function* rsi(data: Float64Array, period: number) {
   let avLoss = 0;
   let delta;
 
-  if (period <= 0) throw new RangeError('Period must be a positive integer');
+  if (period <= 0)
+    throw new RangeError('[rsi] period must be a positive integer');
 
   if (period > data.length)
-    throw new RangeError('Specified period is too big for computing rsi');
+    throw new RangeError('[rsi] specified period is too big');
 
   for (let i = 1; i < period; i += 1) {
     delta = data[i] - data[i - 1];
