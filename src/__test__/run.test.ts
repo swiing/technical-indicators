@@ -13,16 +13,21 @@ import path from 'path';
 
 import unittest from './util.js';
 
-fs.readdirSync('./src')
+// recursive otion requires node >18.17.0
+// @ts-ignore
+fs.readdirSync('./src', { recursive: true })
+  .filter((file) => path.dirname(file) !== '__test__')
   .filter((file) => path.extname(file) === '.ts')
   .filter((file) => file !== 'index.ts')
   .forEach((file) => {
-    const fn = file.split('.')[0];
+    const fn = path.dirname(file);
 
     try {
       // if there is no matching test file, this will throw,
       // and this is expected.
-      const fileData = fs.readFileSync(path.join('./src', `${fn}.test.json`));
+      const fileData = fs.readFileSync(
+        path.join(`./src/${fn}`, `${fn}.test.json`)
+      );
 
       // The json test file is expected to provide 1 or more (i.e. an array of) tests
       Array.from(JSON.parse(fileData.toString())).forEach((value) => {
@@ -44,7 +49,7 @@ fs.readdirSync('./src')
       // Solved by https://github.com/Chatie/eslint-config/issues/45#issuecomment-885507652
       // (@TODO: this seems a temporary solution though)
       if ((err as NodeJS.ErrnoException).code === 'ENOENT')
-        console.error(`Missing file ${fn}.test.json in ./src.`);
+        console.error(`Missing file ${fn}.test.json in ./src/${fn}/.`);
       else if (err instanceof SyntaxError)
         console.error(`Syntax error in ${fn}.test.json`);
 

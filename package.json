@@ -13,9 +13,10 @@
     "prepare": "npm run build",
     "style:fix": "prettier src/**/*.ts --write",
     "style:check": "prettier src/**/*.ts --check",
-    "test": "cross-env FORCE_COLOR=true NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest --verbose --coverage"
+    "test": "cross-env FORCE_COLOR=true NODE_OPTIONS=\"--experimental-vm-modules --no-warnings --no-experimental-fetch\" jest --verbose --coverage"
   },
   "engines": {
+    "node": ">18.17.0",
     "npm": ">7"
   },
   "devDependencies": {
