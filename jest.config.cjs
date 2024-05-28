@@ -175,7 +175,12 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '\\.(ts)$': 'ts-jest',
+    '\\.(ts)$': [
+      'ts-jest',
+      {
+        useESM: true,
+      },
+    ],
     // '\\.(ts)$': '@sucrase/jest-plugin',
   },
 
@@ -198,9 +203,4 @@ module.exports = {
   // watchman: true,
 
   extensionsToTreatAsEsm: ['.ts'],
-  globals: {
-    'ts-jest': {
-      useESM: true,
-    },
-  },
 };
