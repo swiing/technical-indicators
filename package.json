@@ -1,5 +1,5 @@
 {
-  "name": "technical-indicators",
+  "name": "@stockastix/technical-indicators",
   "version": "0.0.1",
   "description": "Technical indicators for financial analysis",
   "author": "swiing",
@@ -7,6 +7,10 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stockastix/technical-indicators.git"
+  },
   "scripts": {
     "build": "tsc",
     "lint": "eslint ./src --ext ts",
