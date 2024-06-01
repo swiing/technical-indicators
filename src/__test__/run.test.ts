@@ -8,8 +8,9 @@
 // exit(1) if no test file found, hence enforcing a test file for each indicator
 
 /* eslint-disable no-console */
-import fs from 'fs';
-import path from 'path';
+
+import fs from 'node:fs';
+import path from 'node:path';
 
 import unittest from './util.js';
 

@@ -1,4 +1,4 @@
-import path from 'path';
+import path from 'node:path';
 
 type testargs = {
   // e.g. "sma" // (input: Float64Array, param: number) => Generator<number, void, unknown>;
