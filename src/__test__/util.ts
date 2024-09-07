@@ -3,7 +3,7 @@ import path from 'node:path';
 type testargs = {
   // e.g. "sma" // (input: Float64Array, param: number) => Generator<number, void, unknown>;
   fn: string;
-  // e.g. "simle moving average"
+  // e.g. "simple moving average"
   // will default to value of fn if not provided
   desc?: string;
   // e.g. [10,11,12,13]
@@ -21,7 +21,7 @@ export default function test({ fn, desc, input, param, output }: testargs) {
       desc || fn
     }`, async () => {
       const { default: fct } = await import(path.join('../', fn));
-      const generator = fct(new Float64Array(input), param);
+      const generator = fct(new Float64Array(input), ...[param].flat());
 
       if (!output) expect(generator.next).toThrow();
       else {
